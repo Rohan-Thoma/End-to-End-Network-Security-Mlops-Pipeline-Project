@@ -20,6 +20,10 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier
 )
+
+import dagshub
+dagshub.init(repo_owner='lolguy699', repo_name='End-to-End-Network-Security-Mlops-Pipeline-Project', mlflow=True)
+
 import mlflow 
 
 class ModelTrainer:
