@@ -20,11 +20,11 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier
 )
-
+import mlflow 
 import dagshub
 dagshub.init(repo_owner='lolguy699', repo_name='End-to-End-Network-Security-Mlops-Pipeline-Project', mlflow=True)
 
-import mlflow 
+mlflow.set_tracking_uri("https://dagshub.com/lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project.mlflow")
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
@@ -43,7 +43,7 @@ class ModelTrainer:
             mlflow.log_metric("f1_score", f1_score)
             mlflow.log_metric("precision_score", precision_score)
             mlflow.log_metric("recall_score", recall_score)
-            mlflow.sklearn.log_model(best_model, artifact_path= model_name)
+            mlflow.sklearn.log_model(best_model)
 
 
     def train_model(self, X_train, y_train, X_test, y_test):
