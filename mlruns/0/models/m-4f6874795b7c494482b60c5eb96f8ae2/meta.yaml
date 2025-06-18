@@ -1,0 +1,10 @@
+artifact_location: file:///home/ml01/MLOps/Network_security_project/networksecurity/mlruns/0/models/m-4f6874795b7c494482b60c5eb96f8ae2/artifacts
+creation_timestamp: 1750242895196
+experiment_id: '0'
+last_updated_timestamp: 1750242896617
+model_id: m-4f6874795b7c494482b60c5eb96f8ae2
+model_type: null
+name: Random_Forest
+source_run_id: d65617b4e495438b8406c6069904e5a0
+status: 2
+status_message: null

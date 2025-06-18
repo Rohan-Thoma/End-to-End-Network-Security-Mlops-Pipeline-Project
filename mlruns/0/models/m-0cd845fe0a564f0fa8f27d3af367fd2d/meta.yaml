@@ -1,0 +1,10 @@
+artifact_location: file:///home/ml01/MLOps/Network_security_project/networksecurity/mlruns/0/models/m-0cd845fe0a564f0fa8f27d3af367fd2d/artifacts
+creation_timestamp: 1750241927854
+experiment_id: '0'
+last_updated_timestamp: 1750241929052
+model_id: m-0cd845fe0a564f0fa8f27d3af367fd2d
+model_type: null
+name: crawling-crow-498
+source_run_id: c82b7655a06246969e684fc81465f310
+status: 2
+status_message: null

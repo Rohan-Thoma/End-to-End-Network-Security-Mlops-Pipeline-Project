@@ -4,6 +4,7 @@ numpy
 pymongo
 certifi
 scikit-learn
+mlflow
 dill
 pyaml
 
