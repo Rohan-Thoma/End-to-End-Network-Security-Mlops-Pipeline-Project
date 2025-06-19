@@ -55,7 +55,7 @@ class DataTransformation:
             return processor 
 
         except Exception as e:
-            raise NetworkSecurityException(e,sys )
+            raise NetworkSecurityException(e,sys ) # type: ignore
 
     def initiate_data_transformation(self) -> DataTransformationArtifact:
         logging.info("Entered initiate_data_transformation method of DataTransformtion class ")
@@ -89,8 +89,10 @@ class DataTransformation:
             save_numpy_array_data(self.data_transformation_config.transformed_test_file_path, array= test_arr)
             save_object(self.data_transformation_config.transformed_object_file_path, preprocessor_object)
 
+            #save this also in the final_model folder
+            save_object("final_model/preprocessor.pkl", preprocessor_object)
+            
             #preparing artifacts
-
             data_transformation_artifact= DataTransformationArtifact(
                  transformed_object_file_path=self.data_transformation_config.transformed_object_file_path,
                  transformed_train_file_path=self.data_transformation_config.transformed_train_file_path,
@@ -101,4 +103,4 @@ class DataTransformation:
 
 
         except Exception as e:
-            raise NetworkSecurityException(e,sys)        
+            raise NetworkSecurityException(e,sys)      # type: ignore  

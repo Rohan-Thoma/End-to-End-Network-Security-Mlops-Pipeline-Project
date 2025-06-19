@@ -1,0 +1,35 @@
+[ 2025-06-19 11:52:30,281 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-19 11:52:30,287 ] 107 dagshub - INFO - Accessing as lolguy699
+[ 2025-06-19 11:52:30,978 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project "HTTP/1.1 200 OK"
+[ 2025-06-19 11:52:31,592 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-19 11:52:31,598 ] 107 dagshub - INFO - Initialized MLflow to track repo "lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project"
+[ 2025-06-19 11:52:31,599 ] 107 dagshub - INFO - Repository lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project initialized!
+[ 2025-06-19 11:53:40,566 ] 33 root - INFO - Start data Ingestion
+[ 2025-06-19 11:53:43,256 ] 68 root - INFO - Performed train test split on the dataframe
+[ 2025-06-19 11:53:43,256 ] 70 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-06-19 11:53:43,256 ] 78 root - INFO - Exporting train and test file path.
+[ 2025-06-19 11:53:43,282 ] 84 root - INFO - Exported train and test file path.
+[ 2025-06-19 11:53:43,282 ] 36 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts/06_19_2025_11_52_28/data_ingestion/ingested/train.csv', test_file_path='Artifacts/06_19_2025_11_52_28/data_ingestion/ingested/test.csv')
+[ 2025-06-19 11:53:43,283 ] 45 root - INFO - Start data validation
+[ 2025-06-19 11:53:43,296 ] 37 root - INFO - Required number of columns: 2
+[ 2025-06-19 11:53:43,296 ] 38 root - INFO - Dataframe has columns:31
+[ 2025-06-19 11:53:43,296 ] 37 root - INFO - Required number of columns: 2
+[ 2025-06-19 11:53:43,296 ] 38 root - INFO - Dataframe has columns:31
+[ 2025-06-19 11:53:43,369 ] 48 root - INFO - Data Validation Completed and artifact: DataValidationArtifact(validation_status=None, valid_train_file_path='Artifacts/06_19_2025_11_52_28/data_ingestion/ingested/train.csv', valid_test_file_path='Artifacts/06_19_2025_11_52_28/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts/06_19_2025_11_52_28/data_validation/drift_report/report.yaml')
+[ 2025-06-19 11:53:43,369 ] 57 root - INFO - Start data transformation
+[ 2025-06-19 11:53:43,369 ] 61 root - INFO - Entered initiate_data_transformation method of DataTransformtion class 
+[ 2025-06-19 11:53:43,369 ] 63 root - INFO - Starting data transformation
+[ 2025-06-19 11:53:43,380 ] 45 root - INFO - Entered get_data_transformer_object method of Transformatiion class
+[ 2025-06-19 11:53:43,380 ] 51 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-06-19 11:53:43,385 ] 45 root - INFO - Entered the save object method of MainUtils class
+[ 2025-06-19 11:53:43,386 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-19 11:53:43,386 ] 45 root - INFO - Entered the save object method of MainUtils class
+[ 2025-06-19 11:53:43,389 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-19 11:53:43,389 ] 60 root - INFO - Data transformation Completed and artifact: DataTransformationArtifact(transformed_train_file_path='Artifacts/06_19_2025_11_52_28/data_transformation/transformed/train.npy', transformed_test_file_path='Artifacts/06_19_2025_11_52_28/data_transformation/transformed/test.npy', transformed_object_file_path='Artifacts/06_19_2025_11_52_28/data_transformation/transformed_object/preprocessing.pkl')
+[ 2025-06-19 11:53:43,389 ] 70 root - INFO - Start model trainer
+[ 2025-06-19 11:56:30,389 ] 45 root - INFO - Entered the save object method of MainUtils class
+[ 2025-06-19 11:56:30,407 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-19 11:56:30,407 ] 45 root - INFO - Entered the save object method of MainUtils class
+[ 2025-06-19 11:56:30,439 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-19 11:56:30,439 ] 126 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/06_19_2025_11_52_28/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9916102294551703, precision_score=0.9891107078039928, recall_score=0.9941224158897446), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9765372168284789, precision_score=0.966373098478783, recall_score=0.9869174161896974))
+[ 2025-06-19 11:56:30,440 ] 76 root - INFO -  Model training completed and artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/06_19_2025_11_52_28/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9916102294551703, precision_score=0.9891107078039928, recall_score=0.9941224158897446), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9765372168284789, precision_score=0.966373098478783, recall_score=0.9869174161896974))

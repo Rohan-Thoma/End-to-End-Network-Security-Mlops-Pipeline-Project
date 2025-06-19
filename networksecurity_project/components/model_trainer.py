@@ -32,7 +32,7 @@ class ModelTrainer:
             self.model_trainer_config = model_trainer_config
             self.data_transformation_artifact = data_transformation_artifact
         except Exception as e:
-            raise NetworkSecurityException(e, sys)
+            raise NetworkSecurityException(e, sys) # type: ignore
         
     def track_mlflow(self,best_model, classificationmetric, model_name):
         with mlflow.start_run():
@@ -115,6 +115,9 @@ class ModelTrainer:
 
         save_object(self.model_trainer_config.trained_model_file_path, obj=Network_Model)
 
+        #save the best model in another folder
+        save_object("final_model/model.pkl", best_model)
+
         ## Model trainer Artifact
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                                                       train_metric_artifact= classification_train_metric,
@@ -144,4 +147,4 @@ class ModelTrainer:
             return model_trainer_artifact
     
         except Exception as e:
-            raise NetworkSecurityException(e, sys)
+            raise NetworkSecurityException(e, sys) # type: ignore

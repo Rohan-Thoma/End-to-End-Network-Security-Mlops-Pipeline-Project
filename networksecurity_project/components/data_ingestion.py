@@ -21,12 +21,12 @@ load_dotenv()
 MONGO_DB_URL = os.getenv("MONGO_DB_URL")
 
 
-class DataInjestion:
+class DataIngestion:
     def __init__(self, data_ingestion_config:DataIngestionConfig):
         try:
             self.data_ingestion_config=data_ingestion_config
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) # type: ignore
     
 
     def export_collection_dataframe(self):
@@ -47,7 +47,7 @@ class DataInjestion:
             df.replace({"na":np.nan}, inplace=True)
             return df 
         except Exception as e:
-            raise NetworkSecurityException(e,sys)           
+            raise NetworkSecurityException(e,sys)    # type: ignore       
     
     def export_data_into_feature_store(self,dataframe: pd.DataFrame):
         try:
@@ -58,7 +58,7 @@ class DataInjestion:
             dataframe.to_csv(feature_store_file_path, index=False, header=True)
             return dataframe
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) # type: ignore
     
     def split_data_as_train_test(self,dataframe: pd.DataFrame):
         try:
@@ -84,7 +84,7 @@ class DataInjestion:
             logging.info(f"Exported train and test file path.")
 
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) # type: ignore
         
 
     def initiate_data_ingestion(self):
@@ -99,6 +99,6 @@ class DataInjestion:
 
 
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) # type: ignore
         
         
