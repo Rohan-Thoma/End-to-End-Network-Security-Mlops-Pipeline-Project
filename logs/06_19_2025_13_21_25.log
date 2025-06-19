@@ -1,0 +1,6 @@
+[ 2025-06-19 13:21:28,085 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-19 13:21:28,088 ] 107 dagshub - INFO - Accessing as lolguy699
+[ 2025-06-19 13:21:28,683 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project "HTTP/1.1 200 OK"
+[ 2025-06-19 13:21:29,217 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-19 13:21:29,218 ] 107 dagshub - INFO - Initialized MLflow to track repo "lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project"
+[ 2025-06-19 13:21:29,219 ] 107 dagshub - INFO - Repository lolguy699/End-to-End-Network-Security-Mlops-Pipeline-Project initialized!
